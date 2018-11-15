@@ -1,0 +1,6 @@
+{
+    "disableScroll": true,
+    "usingComponents": {
+        "mod-h-light": "/components/mod-h-light/index"
+    }
+}

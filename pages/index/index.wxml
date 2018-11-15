@@ -1,0 +1,5 @@
+<mod-h-light titleObj="{{titleObj}}" color="{{color}}" ></mod-h-light>
+
+
+<button data-type="single" bind:tap="choice">单个关键词</button>
+<button data-type="nosingle" bind:tap="choice">多个关键词</button>

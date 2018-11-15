@@ -1,0 +1,23 @@
+<text wx:for="{{searchArray}}" wx:key="font{{index}}" style="color: {{hLight.getColor(item,keys,color)}}">{{item}}</text>
+
+<wxs module="hLight">
+// wxs暂不支持es6 
+var seTcolor;
+var getColor = function(item, keys, color) {
+    keys = JSON.parse(keys);
+    if(typeof keys === 'string'){
+        if(item === keys){
+            seTcolor = color;
+            return seTcolor;
+        }
+    }else{
+        for (var i = 0; i<keys.length; i++){
+            if(keys[i].key === item){
+                seTcolor = keys[i].color || color;
+                return seTcolor;
+            }
+        }
+    }
+}
+module.exports.getColor = getColor;
+</wxs>
